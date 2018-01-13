@@ -26,11 +26,16 @@ namespace LetterCounter
                     CountLetters counter = new CountLetters(openTextFile.FileName);
                     if (counter.Success)
                     {
-                        cmdOpenTextFile.Text = openTextFile.SafeFileName;
+                        this.Text = openTextFile.SafeFileName;
+                        long charCount = 0;
                         foreach (var item in counter.SortedCharacterCount)
                         {
+                            if (item.Key != ' ')
+                                charCount += item.Value;
+
                             listBox1.Items.Add(string.Format($"{item.Key}, {item.Value}"));
                         }
+                        listBox1.Items.Add(string.Format($"{charCount} Total Characters. (ignoring spaces)"));
                     }
                 }
                 catch (Exception ex)

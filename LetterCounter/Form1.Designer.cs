@@ -58,18 +58,18 @@
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(27, 24);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(139, 303);
+            this.listBox1.Size = new System.Drawing.Size(164, 303);
             this.listBox1.TabIndex = 1;
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(206, 394);
+            this.ClientSize = new System.Drawing.Size(231, 394);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.cmdOpenTextFile);
             this.Name = "frmMain";
-            this.Text = "Form1";
+            this.Text = "Char Counter";
             this.ResumeLayout(false);
 
         }
