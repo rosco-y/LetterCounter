@@ -24,7 +24,14 @@ namespace LetterCounter
                 try
                 {
                     CountLetters counter = new CountLetters(openTextFile.FileName);
-                    MessageBox.Show($"Test: {counter.Success}");
+                    if (counter.Success)
+                    {
+                        cmdOpenTextFile.Text = openTextFile.SafeFileName;
+                        foreach (var item in counter.SortedCharacterCount)
+                        {
+                            listBox1.Items.Add(string.Format($"{item.Key}, {item.Value}"));
+                        }
+                    }
                 }
                 catch (Exception ex)
                 {
