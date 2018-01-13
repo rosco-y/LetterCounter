@@ -21,6 +21,15 @@ namespace LetterCounter
         {
             if (openTextFile.ShowDialog(this) == DialogResult.OK)
             {
+                try
+                {
+                    CountLetters counter = new CountLetters(openTextFile.FileName);
+                    MessageBox.Show($"Test: {counter.Success}");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
                 
 
             }
